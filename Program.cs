@@ -6,17 +6,24 @@
 2, 4 -> 16 */
 
 
-/* Console.Write("Видите число A:  ");         
+/* Console.Write("Видите число:  ");         
 int a = int.Parse(Console.ReadLine()!);     
-Console.Write("Видите число B:  ");            
+Console.Write("Видите степень:  ");            
 int b = int.Parse(Console.ReadLine()!);
-int count = a;
-for (int i = 1; i < b; i++)
+
+Console.WriteLine($"{a} в степени {b} = {Pow(a,b)}");
+
+int Pow(int num, int rank)
 {
-    count = count * a;
-}
-Console.WriteLine("Ответ 'А' в степени 'В' ровна: " +count);
- */
+    if(rank==0) return 1;
+
+    int result = num;
+    for (int i = 2; i <= rank; i++)
+    {
+        result *= num;
+    }
+    return result;
+}*/
 
 /*  Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
  452 -> 11
